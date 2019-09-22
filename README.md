@@ -1,11 +1,11 @@
 # GTH-Location-TeamName
 Project submission for the `Global Travel Hackathon in [Location], by [team-name] team`.
 
-**Write a short sentence explaining what does your project.**
+**Write one sentence explaining what does your project.**
 
 ![Add a screenshot from your project. For example the main website page.](https://raw.githubusercontent.com/Global-Travel-Hackathon/GTH-Location-TeamName/master/screenshots/Global-Travel-Hackathon-image.png)
 
-## Description
+## :books: Description
 
 Write a short abstract of the project. Don't forget to include:
 
@@ -17,7 +17,7 @@ Write a short abstract of the project. Don't forget to include:
 * Any libraries used in the project;
 * Any components not created at the hackathon;
 
-## Maintainers
+## :hugs: Maintainers
 
 List all the team members. For example:
 * [Jona Azizaj - jonatoni](https://github.com/jonatoni)
@@ -33,11 +33,11 @@ List all the team members. For example:
 
 Write a short description how can other people run your project.
 
-## Devstack
+## :bulb: Devstack
 
 Please, explain what technologies you have used.
 
-# Licence
+# :warning: Licence
 
 Any intellectual property developed during and within the scope of the hackathon must be open source and licensed under one of the licenses referenced in https://opensource.org/licenses. We will not have any rights and teams will be the author of their work.
 
