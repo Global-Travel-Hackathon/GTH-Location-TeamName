@@ -37,7 +37,7 @@ Write a short description how can other people run your project.
 
 Please, explain what technologies you have used.
 
-# :warning: Licence
+## :warning: Licence
 
 Any intellectual property developed during and within the scope of the hackathon must be open source and licensed under one of the licenses referenced in https://opensource.org/licenses. We will not have any rights and teams will be the author of their work.
 
