@@ -3,5 +3,4 @@ Project submission for the Global Travel Hackathon in [Location], by [team-name]
 
 **Write a short sentence explaining what does your project.**
 
-!(Add a screenshot from your project. For example the main website page.)[https://github.com/Global-Travel-Hackathon/GTH-Location-TeamName/blob/master/screenshots/Global-Travel-Hackathon-image.png]
-
+!(Add a screenshot from your project. For example the main website page.)[https://raw.githubusercontent.com/Global-Travel-Hackathon/GTH-Location-TeamName/master/screenshots/Global-Travel-Hackathon-image.png]
