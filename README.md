@@ -1,5 +1,5 @@
 # GTH-Location-TeamName
-Project submission for the Global Travel Hackathon in [Location], by [team-name] team.
+Project submission for the `Global Travel Hackathon in [Location], by [team-name] team`.
 
 **Write a short sentence explaining what does your project.**
 
@@ -40,5 +40,7 @@ Please, explain what technologies you have used.
 # Licence
 
 Any intellectual property developed during and within the scope of the hackathon must be open source and licensed under one of the licenses referenced in https://opensource.org/licenses. We will not have any rights and teams will be the author of their work.
-Example:
-The code in this project is licensed under MIT license. By contributing to this project, you agree that your contributions will be licensed under its MIT license.
+
+`Example:`
+
+>The code in this project is licensed under MIT license. By contributing to this project, you agree that your contributions will be licensed under its MIT license.
