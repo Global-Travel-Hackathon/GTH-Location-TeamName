@@ -1,14 +1,13 @@
 import React, {Component} from 'react';
 import {BrowserRouter as Router, Switch} from 'react-router-dom';
 
-import Navbar from './components/Navbar.js';
 import PrivateRoute from './components/routes/PrivateRoute.js';
 import AnonRoute from './components/routes/AnonRoute.js';
 
 import Private from './pages/Private';
 import Signup from './pages/signup';
 import Login from './pages/login';
-
+import Menu from './components/ui/menu'
 import AuthProvider from './contexts/auth-context.js';
 
 import './App.min.css';
@@ -19,12 +18,19 @@ class App extends Component {
       <Router>
         <AuthProvider>
           <div className="container">
-            <h1>Basic React Authentication</h1>
-            <Navbar />
             <Switch>
-              <AnonRoute path="/signup" component={Signup} />
-              <AnonRoute path="/login" component={Login} />
-              <PrivateRoute path="/private" component={Private} />
+            <AnonRoute
+              exact
+              path="/signup"
+              render={(props)=> <> <Menu/> <Signup {...props}/> </>} />
+            <AnonRoute
+              exact
+              path="/login"
+              render={(props)=> <Login {...props}/>} />
+            <PrivateRoute
+              exact
+              path="/private"
+              render={(props)=> <Private {...props}/>} />
             </Switch>
           </div>
         </AuthProvider>
