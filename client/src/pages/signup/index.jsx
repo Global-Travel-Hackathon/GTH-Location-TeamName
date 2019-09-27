@@ -20,18 +20,16 @@ class Signup extends Component {
     const surname = this.state.surname;
     const email = this.state.email;
     const password = this.state.password;
-    const need1 = this.state.need1;
-    const need2 = this.state.need2;
-    const need3 = this.state.need3;
 
-    this.props.signup({ name, surname, email, password, need1, need2, need3 })
+
+    this.props.signup({ name, surname, email, password })
       .then( (user) => {
         this.setState({
             name: '',
             surname: '',
             email: '',
             password: '',
-            needs: [need1, need2, need3]
+            
         });
       })
       .catch( error => console.log(error) )
@@ -40,12 +38,11 @@ class Signup extends Component {
   handleChange = (event) => {  
     const {name, value} = event.target;
     this.setState({[name]: value});
-    console.log(this.state);
   }
 
 
   render() {
-    const { name, surname, email, password, need1, need2, need3 } = this.state;
+    const { name, surname, email, password,} = this.state;
     return (
       <>
         <form onSubmit={this.handleFormSubmit}>
@@ -58,11 +55,11 @@ class Signup extends Component {
           <label htmlFor='password'>Password:</label>
           <input id='password' type='password' name='password' value={password} onChange={this.handleChange} />
           <label htmlFor='needs'>What's your needs:</label>
-          <section id='needs'>
+          {/* <section id='needs'>
             <button id='need1' name='need1' value={!need1} onClick={this.handleChange}>Need 1</button>
             <button id='need2' name='need2' value={!need2} onClick={this.handleChange}>Need 2</button>
             <button id='need3' name='need3' value={!need3} onClick={this.handleChange}>Need 3</button>
-          </section>
+          </section> */}
           <input type='submit' value='Signup' /> 
         </form>
 

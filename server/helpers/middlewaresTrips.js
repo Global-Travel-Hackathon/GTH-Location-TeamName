@@ -6,23 +6,23 @@ exports.validationFormTrip = () => (req, res, next) => {
   const place = req.body;
   if (!trip.title) {
     return next(
-      createError(421)
+      createError(425)
     );
   } else if (!trip.destination) {
     return next(
-      createError(422)
+      createError(426)
     );
   } else if (!trip.description) {
     return next(
-      createError(423)
+      createError(427)
     );
   } else if (!trip.startDate) {
     return next(
-      createError(424)
+      createError(428)
     );
   } else if (!trip.endDate) {
     return next(
-      createError(425)
+      createError(429)
     );
   } else {
     next();
