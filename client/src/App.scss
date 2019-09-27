@@ -3,3 +3,39 @@
 @import 'components/scss/mixins';
 @import 'components/scss/vars';
 
+/* Import UI components */
+@import 'components/ui/menu/menu';
+
+
+/* Import pages */
+
+
+/* Reset */
+*{
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: $font;
+  color: $first-color;
+}
+.loading-container{
+  position: absolute;
+  top:50%;
+  left: 50%;
+  width: 100%;
+  height: 20px;
+  transform: translate(-50%,-50%);
+  .loading-box{
+    position: relative;
+    width: 100%;
+    .bar{
+      position: absolute;
+      height: 20px;
+      background: black;
+      @include transition(1s)
+    }
+  }
+}
