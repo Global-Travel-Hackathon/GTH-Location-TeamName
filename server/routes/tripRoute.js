@@ -8,7 +8,7 @@ const Trip = require('../models/Trip.js');
 const User = require('../models/User.js');
 
 const {
-  validationFormPlace
+  validationFormTrip
 } = require('../helpers/middlewaresTrips.js');
 
 router.get('/em', async (req, res, next) => {
