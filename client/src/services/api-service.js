@@ -8,26 +8,29 @@ class ApiService {
     })
   }
 
-  signup(user) {
-    const { username, password } = user;
-    return this.auth.post('/auth/signup', {username, password})
-      .then(({ data }) => data);
+  getAllTrips() {
+    return this.trip.get('/em')
+    .then(response => response)
   }
 
-  login(user) {
-    const { username, password } = user;
-    return this.auth.post('/auth/login', {username, password})
-      .then(({ data }) => data);
+  getAllMyTrips() {
+    return this.trip.get(`/me`)
+    .then(response => response)
   }
 
-  logout() {
-    return this.auth.post('/auth/logout')
-      .then(response => response.data)
+  addOneTrip(newTrip) {
+    return this.trip.post('/trip/add', newTrip)
+    .then(response => response)
   }
 
-  me() {
-    return this.auth.get('/auth/me')
-    .then(response => response.data)
+  editOneTrip(id, tripUpdated) {
+    return this.trip.put(`/trip/edit/${id}`, tripUpdated)
+    .then(response => response)
+  }
+
+  deleteOneTrip(id) {
+    return this.trip.delete(`/trip/delete/${id}`)
+    .then(response => response)
   }
 }
 

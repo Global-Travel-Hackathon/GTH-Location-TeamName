@@ -11,19 +11,19 @@ export const processError = (errorCode) => {
       case 404:
         error = 'Sorry. We cannot find any user with this email.';
         break;
-      case 421:
+      case 425:
         error = 'Trip title is required.';
         break;   
-      case 422:
+      case 426:
         error = 'Trip destination is required.';
         break;  
-      case 423:
+      case 427:
         error = 'Trip description is required.';
         break;   
-      case 424:
+      case 428:
         error = 'Trip start date is required.';
         break;  
-      case 425:
+      case 429:
         error = 'Trip end date is required.';
         break;
       default:
