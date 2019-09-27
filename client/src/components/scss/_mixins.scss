@@ -1,0 +1,16 @@
+@mixin media($width, $type: min) {
+  @if map_has_key($prrrcl-breakpoints, $width) {
+    $width: map_get($prrrcl-breakpoints, $width);
+
+    @media (#{$type}-width: $width) {
+      @content;
+    }
+  }
+}
+@mixin transition($time) {
+  -webkit-transition: $time cubic-bezier(0.77, 0, 0.175, 1);
+  -moz-transition: $time cubic-bezier(0.77, 0, 0.175, 1);
+  -ms-transition: $time cubic-bezier(0.77, 0, 0.175, 1);
+  -o-transition: $time cubic-bezier(0.77, 0, 0.175, 1);
+  transition: $time cubic-bezier(0.77, 0, 0.175, 1);
+}
