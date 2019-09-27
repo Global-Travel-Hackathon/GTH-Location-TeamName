@@ -1,0 +1,12 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "App.scss",
+        "components/scss/_fonts.scss",
+        "components/scss/_mixins.scss",
+        "components/scss/_vars.scss"
+    ],
+    "names": [],
+    "file": "App.min.css"
+}

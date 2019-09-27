@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import withAuth from '../components/withAuth.js';
+import withAuth from '../hoc/withAuth.js';
 
 class Private extends Component {
   render() {
