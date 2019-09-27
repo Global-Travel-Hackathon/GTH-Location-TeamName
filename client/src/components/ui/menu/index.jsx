@@ -330,7 +330,7 @@ const Menu = (props) => {
             <img className={classImg || 'horizontal-profile'} src={props.user.profilePic} ref={imgProfile} alt="ProfilePic"/>
           </button>
           <button>Editar perfil</button>
-          <button className="flirt-contact">Contacto con Flirt</button>
+          <button className="flirt-contact">Contacto con Kiwi 'em</button>
           <button onClick={logout}>Cerrar sesión</button>
         </div>
       </div>
