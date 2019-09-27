@@ -1,9 +1,7 @@
-# GTH-Location-TeamName
-Project submission for the `Global Travel Hackathon in [Location], by [team-name] team`.
+# GTH-Belgrade-TheSocialCircleWeb
+Project submission for the `Global Travel Hackathon in Belgrade, by The Social Circle team`.
 
 **Write one sentence explaining what does your project.**
-
-![Add a screenshot from your project. For example the main website page.](https://raw.githubusercontent.com/Global-Travel-Hackathon/GTH-Location-TeamName/master/screenshots/Global-Travel-Hackathon-image.png)
 
 ## :books: Description
 
