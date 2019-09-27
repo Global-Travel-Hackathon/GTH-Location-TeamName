@@ -6,8 +6,8 @@ import PrivateRoute from './components/routes/PrivateRoute.js';
 import AnonRoute from './components/routes/AnonRoute.js';
 
 import Private from './pages/Private';
-import Signup from './pages/Signup';
-import Login from './pages/Login';
+import Signup from './pages/signup';
+import Login from './pages/login';
 
 import AuthProvider from './contexts/auth-context.js';
 
