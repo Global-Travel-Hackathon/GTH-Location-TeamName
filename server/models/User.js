@@ -2,7 +2,11 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const userSchema = new Schema({
-  username: {
+  name: {
+    type: String,
+    required: true
+  },
+  surname: {
     type: String,
     required: true
   },
@@ -18,7 +22,7 @@ const userSchema = new Schema({
   type: {
     type: String,
     required: true,
-    enum: ['Volunteer', '']
+    enum: ['Volunteer', 'Traveler']
   },
   pocket: {
     type: Number,
