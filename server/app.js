@@ -21,7 +21,7 @@ mongoose
     reconnectTries: Number.MAX_VALUE
   })
   .then(() => {
-    console.log(`Connected to database`);
+    console.log('Connected to database');
   })
   .catch(error => {
     console.error(error);
@@ -58,11 +58,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/auth', auth);
-<<<<<<< HEAD
 app.use('/api', api);
-=======
-app.use('/api', trip);
->>>>>>> 0a4e9fec8d5e07d6310a0c9b8f8b40fc4e29f60d
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
