@@ -20,9 +20,9 @@ const userSchema = new Schema({
     type: String,
     required: true
   },
-  type: {
+  userType: {
     type: String,
-    enum: ['Volunteer', 'Traveler']
+    enum: ['volunteer', 'traveller']
   },
   pocket: {
     type: Number,
@@ -30,9 +30,6 @@ const userSchema = new Schema({
   comments: [{
     type: ObjectId,
     ref: 'Comment'
-  }],
-  needs: [{
-    type: String
   }],
   myTrips: [{
     type: ObjectId,
