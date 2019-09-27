@@ -14,7 +14,7 @@ export const processError = (errorCode) => {
       case 425:
         error = 'Trip title is required.';
         break;   
-      case 426:
+      case 422:        
         error = 'Trip destination is required.';
         break;  
       case 427:

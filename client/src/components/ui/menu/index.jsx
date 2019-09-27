@@ -256,7 +256,6 @@ const Menu = (props) => {
   }
 
   useEffect(() => {
-    console.log(kiwi.children)
     let t = new TimelineMax({
       onComplete() {
         isAnimated.current = false;
