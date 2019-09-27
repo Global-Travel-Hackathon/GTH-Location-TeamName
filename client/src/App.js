@@ -5,6 +5,7 @@ import PrivateRoute from './components/routes/PrivateRoute.js';
 import AnonRoute from './components/routes/AnonRoute.js';
 
 import Private from './pages/Private';
+import Landing from './pages/landing';
 import Signup from './pages/signup';
 import Login from './pages/login';
 import Menu from './components/ui/menu'
@@ -19,6 +20,10 @@ class App extends Component {
         <AuthProvider>
           <div className="container">
             <Switch>
+            <AnonRoute
+              exact
+              path="/"
+              render={(props)=> <> <Landing {...props}/> </>} /> 
             <AnonRoute
               exact
               path="/signup"
