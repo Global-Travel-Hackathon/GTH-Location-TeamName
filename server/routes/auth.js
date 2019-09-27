@@ -23,9 +23,9 @@ router.post(
   isNotLoggedIn(),
   validationLoggin(),
   async (req, res, next) => {
-    const { username, password } = req.body;
+    const { email, password } = req.body;
     try {
-      const user = await User.findOne({ username });
+      const user = await User.findOne({ email });
       if (!user) {
         next(createError(404));
       } else if (bcrypt.compareSync(password, user.password)) {
