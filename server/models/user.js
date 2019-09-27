@@ -4,6 +4,10 @@ const Schema = mongoose.Schema;
 const userSchema = new Schema({
   username: {
     type: String,
+    required: true
+  },
+  email: {
+    type: String,
     required: true,
     unique: true
   },
@@ -11,6 +15,14 @@ const userSchema = new Schema({
     type: String,
     required: true
   },
+  type: {
+    type: String,
+    required: true
+  },
+  myTrips: [{
+    type: ObjectId,
+    ref: 'Trip'
+  }],
 }, {
   timestamps: {
     createdAt: 'created_at',
