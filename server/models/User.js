@@ -31,6 +31,9 @@ const userSchema = new Schema({
     type: ObjectId,
     ref: 'Comment'
   }],
+  needs: [{
+    type: String
+  }],
   myTrips: [{
     type: ObjectId,
     ref: 'Trip'
