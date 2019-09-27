@@ -17,7 +17,11 @@ const userSchema = new Schema({
   },
   type: {
     type: String,
-    required: true
+    required: true,
+    enum: ['Volunteer', '']
+  },
+  pocket: {
+    type: Number,
   },
   myTrips: [{
     type: ObjectId,
