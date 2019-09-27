@@ -21,7 +21,7 @@ mongoose
     reconnectTries: Number.MAX_VALUE
   })
   .then(() => {
-    console.log(`Connected to database`);
+    console.log('Connected to database');
   })
   .catch(error => {
     console.error(error);
