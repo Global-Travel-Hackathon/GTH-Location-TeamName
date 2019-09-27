@@ -23,6 +23,10 @@ const userSchema = new Schema({
   pocket: {
     type: Number,
   },
+  comments: [{
+    type: ObjectId,
+    ref: 'Comment'
+  }],
   myTrips: [{
     type: ObjectId,
     ref: 'Trip'
