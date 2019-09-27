@@ -1,22 +1,14 @@
-import React from 'react';
-import {Route, Redirect} from 'react-router-dom';
+import React from 'react'
+import { Route, Redirect } from 'react-router-dom';
 import withAuth from '../../hoc/withAuth';
 
 const AnonRoute = (props) => {
-  console.log(props)
-  const {isLoggedIn, component: Component, ...rest} = props;
+  const { isLoggedIn, render , ...rest} = props
   return (
     <>
-      {!isLoggedIn ?  <Route 
-        render={(props) => {
-          return <Component {...props}/>
-        }}
-        {...rest}
-      /> : <Redirect to='/private' />}
+    {!isLoggedIn ?  <Route render={render} {...rest}/> : <Redirect to="/grid"/>}  
     </>
-
-   
-  );
+  )
 }
 
-export default withAuth(AnonRoute);
+export default withAuth(AnonRoute)
