@@ -1,8 +1,7 @@
-'use strict'
+'use strict';
 
-const mongoose = require('mongoose')
-const Schema = mongoose.Schema
-const ObjectId = Schema.Types.ObjectId
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
 
 const tripSchema = new Schema({
   title: {
@@ -25,14 +24,15 @@ const tripSchema = new Schema({
     type: String
   },
   needs: [{
-    type: String,
+    type: String
   }],
   owner: String
 },
 {
   timestamps: true
-})
+});
 
-const Trip = mongoose.model('Trip', tripSchema)
+const Trip = mongoose.model('Trip', tripSchema);
 
 module.exports = Trip
+;

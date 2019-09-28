@@ -9,6 +9,7 @@ const debug = require('debug')('api-auth:server');
 const http = require('http');
 const socketIo = require('socket.io');
 
+const Trip = require('../models/Trip');
 /**
  * Get port from environment and store in Express.
  */
@@ -58,6 +59,11 @@ io.on('connection', socket => {
       body,
       from: socket.id
     });
+  });
+
+  socket.on('home', async () => {
+    const trips = await Trip.find();
+    socket.broadcast.emit('home', trips);
   });
 });
 
