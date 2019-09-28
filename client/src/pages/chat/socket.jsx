@@ -57,7 +57,6 @@ const Sk = () => {
     socket.emit('leave', chatroomName, cb)
   }
 
- 
   const close = () => {
     socket.close(()=>console.log('desconectao'))
   }

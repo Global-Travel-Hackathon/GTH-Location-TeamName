@@ -325,9 +325,9 @@ const Menu = (props) => {
 
       <div className="dash-menu" ref={e => dashMenu = e}>
         <div className="container-dash">
-          <button className="button-profile">
-            <img className={classImg || 'horizontal-profile'} src={props.user.profilePic} ref={imgProfile} alt="ProfilePic"/>
-          </button>
+          {/* <button className="button-profile">
+            <img className={classImg || 'horizontal-profile'} ref={imgProfile} alt="ProfilePic"/>
+          </button> */}
           <button>Editar perfil</button>
           <button className="flirt-contact">Contacto con Kiwi 'em</button>
           <button onClick={logout}>Cerrar sesión</button>
