@@ -1,29 +1,26 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import withAuth from '../../hoc/withAuth.js';
 
-class Signup extends Component {
+const Signup = (props) => {
 
-  state = {
+  const [user,setUser] = useState({
     name: '',
     surname: '',
     email: '',
     password: '',
     form: false,
     userType: null
-  };
+  })
+  
 
-  handleFormSubmit = (event) => {
+  const handleFormSubmit = (event) => {
     event.preventDefault();
-    const name = this.state.name;
-    const surname = this.state.surname;
-    const email = this.state.email;
-    const password = this.state.password;
-    const userType = this.state.userType;
+    const {name, surname, email, password, userType} = user
 
-    this.props.signup({ name, surname, email, password, userType })
-      .then( (user) => {
-        this.setState({
+    props.signup({ name, surname, email, password, userType })
+      .then(() => {
+        setUser({
             name: '',
             surname: '',
             email: '',
@@ -34,12 +31,12 @@ class Signup extends Component {
       .catch( error => console.log(error) )
   }
 
-  handleChange = (event) => {  
+  const handleChange = (event) => {  
     const {name, value} = event.target;
     this.setState({[name]: value});
   }
 
-  handleSelectUserType = (userType) => {
+  const handleSelectUserType = (userType) => {
     this.setState({
       userType: userType,
       form: true
@@ -47,7 +44,7 @@ class Signup extends Component {
   }
 
 
-  render() {
+
     const { form, name, surname, email, password, userType } = this.state;
     console.log(this.state);
     
@@ -55,19 +52,19 @@ class Signup extends Component {
       <>
       {!form && userType === null ? 
         <section>
-          <button onClick={() => this.handleSelectUserType('traveller')}>Traveller</button>
-          <button onClick={() => this.handleSelectUserType('volunteer')}>Volunteer</button>
+          <button onClick={() => handleSelectUserType('traveller')}>Traveller</button>
+          <button onClick={() => handleSelectUserType('volunteer')}>Volunteer</button>
         </section>
         :
-        <form onSubmit={this.handleFormSubmit}>
+        <form onSubmit={(e)=>handleFormSubmit(e)}>
           <label htmlFor='name'>Name:</label>
-          <input id='name' type='text' name='name' value={name} onChange={this.handleChange}/>
+          <input id='name' type='text' name='name' value={name} onChange={(e)=>handleChange(e)}/>
           <label htmlFor=''>Surname:</label>
-          <input id='surname' type='text' name='surname' value={surname} onChange={this.handleChange}/>
+          <input id='surname' type='text' name='surname' value={surname} onChange={(e)=>handleChange(e)}/>
           <label htmlFor=''>Email:</label>
-          <input id='email' type='email' name='email' value={email} onChange={this.handleChange}/>
+          <input id='email' type='email' name='email' value={email} onChange={(e)=>handleChange(e)}/>
           <label htmlFor='password'>Password:</label>
-          <input id='password' type='password' name='password' value={password} onChange={this.handleChange} />
+          <input id='password' type='password' name='password' value={password} onChange={(e)=>handleChange(e)} />
           <label htmlFor='needs'>What's your needs:</label>
           <input type='submit' value='Signup' /> 
         </form>
@@ -78,7 +75,7 @@ class Signup extends Component {
 
       </>
     )
-  }
+  
 }
 
 export default withAuth(Signup);

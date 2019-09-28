@@ -8,6 +8,8 @@ import Private from './pages/Private';
 import Landing from './pages/landing';
 import Signup from './pages/signup';
 import Login from './pages/login';
+import Chat from './pages/chat';
+
 import Menu from './components/ui/menu'
 import AuthProvider from './contexts/auth-context.js';
 
@@ -18,7 +20,6 @@ class App extends Component {
     return (
       <Router>
         <AuthProvider>
-          <div className="container">
             <Switch>
             <AnonRoute
               exact
@@ -36,8 +37,11 @@ class App extends Component {
               exact
               path="/private"
               render={(props)=> <Private {...props}/>} />
+            <PrivateRoute
+              exact
+              path="/chat/:id"
+              render={props => <><Menu/> <Chat {...props} /></> } />
             </Switch>
-          </div>
         </AuthProvider>
       </Router>
     )

@@ -1,38 +1,36 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import withAuth from '../../hoc/withAuth';
 
-class Login extends Component {
-  state = {
-    email: '',
-    password: '',
-  }
+const Login = (props) =>  {
+  const [user, setUser] = useState({
+    email:'',
+    password:''
+  });
 
-  handleFormSubmit = (event) => {
+  const handleFormSubmit = (event) => {
     event.preventDefault();
-    const { email, password } = this.state
 
-    this.props.login({ email, password })
-    .then( (user) => {
-      console.log(user)
-    })
+    const { email, password } = user;
+    props.login({ email, password })
+    .then()
     .catch( error => console.log(error) )
   }
 
-  handleChange = (event) => {  
+  const handleChange = (event) => {  
     const {name, value} = event.target;
-    this.setState({[name]: value});
+    setUser(...user,
+      {[name]: value}
+      );
   }
 
-  render() {
-    const { email, password } = this.state;
     return (
       <>
-        <form onSubmit={this.handleFormSubmit}>
+        <form onSubmit={(e)=>handleFormSubmit(e)}>
           <label htmlFor='email'>Email:</label>
-          <input id='email' type='email' name='email' value={email} onChange={this.handleChange}/>
+          <input id='email' type='email' name='email' value={user.email} onChange={(e)=>handleChange(e)}/>
           <label htmlFor='password'>Password:</label>
-          <input id='password' type='password' name='password' value={password} onChange={this.handleChange} />
+          <input id='password' type='password' name='password' value={user.password} onChange={(e)=>handleChange(e)} />
           <input type='submit' value='Login' />
         </form>
 
@@ -41,7 +39,6 @@ class Login extends Component {
         </p>
       </>
     )
-  }
 }
 
 export default withAuth(Login);
