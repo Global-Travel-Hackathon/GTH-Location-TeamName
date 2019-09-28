@@ -1,65 +1,72 @@
-import React, { Component } from 'react';
+import React, {useState, useEffect} from 'react';
 import authService from '../services/auth-service.js';
-
 export const AuthContext = React.createContext();
 
-class AuthProvider extends Component {
-  state = {
-    isLoggedIn: false,
-    user: {},
+const AuthProvider = (props) => {
+  const[client, setClient] = useState({
     isLoading: true,
+    isLoggedIn: false,
+    user: {}
+  })
+  const userSignup = (user) => {
+    return authService.signup(user)
   }
 
-  userSignUp = (user) => {        
-    return authService.signup(user)
+  const userCheckToken = (token) => {
+    return authService.checktoken(token)
+  }
+
+  const userComplete = (user) => {
+    return authService.complete(user)
     .then((user) => {
-      this.setState({
+      setClient({
+        ...client,
         isLoggedIn: true,
-        user
+        user: user.data
       })
     })
   }
 
-  userLogin = (user) => {
+  const userLogin = (user) => {
     return authService.login(user)
     .then((user) => {
-      this.setState({
+      setClient({
         isLoggedIn: true,
-        user
+        user: user.data
       })
     }) 
   }
 
-  userLogout = () => {
+  const userLogout = () => {
     return authService.logout()
     .then(() => {
-      this.setState({
+      setClient({
+        ...client,
         isLoggedIn: false,
         user: {}
       })
     })
   }
 
-  componentDidMount() {
+  useEffect(()=>{
     authService.me()
     .then(user => {
-      this.setState({
+      setClient({
         user,
         isLoggedIn: true,
         isLoading: false,
       })
     })
     .catch(() => {
-      this.setState({
+      setClient({
         isLoggedIn: false,
         user: {},
         isLoading: false,
       })
     })
-  }
+  },[])
 
-  render() {
-    const {user, isLoggedIn, isLoading} = this.state;
+    const {user, isLoggedIn, isLoading} = client;
     return (
       <>
         {isLoading ? <p>Loading...</p> : (
@@ -67,17 +74,19 @@ class AuthProvider extends Component {
               {
                 user,
                 isLoggedIn,
-                login: this.userLogin,
-                signup: this.userSignUp,
-                logout: this.userLogout
+                login: userLogin,
+                complete: userComplete,
+                signup: userSignup,
+                logout: userLogout,
+                checktoken: userCheckToken
               }
             }>
-              {this.props.children}
+              {props.children}
             </AuthContext.Provider>
           )}
       </>
     );
-  }
+  
 }
 
 export default AuthProvider;

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import withAuth from '../../hoc/withAuth.js';
 
 const Signup = (props) => {
-
+console.log(props)
   const [user,setUser] = useState({
     name: '',
     surname: '',
@@ -16,9 +16,9 @@ const Signup = (props) => {
 
   const handleFormSubmit = (event) => {
     event.preventDefault();
-    const {name, surname, email, password, userType} = user
+    
 
-    props.signup({ name, surname, email, password, userType })
+    props.signup({user})
       .then(() => {
         setUser({
             name: '',
@@ -33,24 +33,21 @@ const Signup = (props) => {
 
   const handleChange = (event) => {  
     const {name, value} = event.target;
-    this.setState({[name]: value});
+    setUser({...user,[name]: value});
   }
 
   const handleSelectUserType = (userType) => {
-    this.setState({
-      userType: userType,
+    setUser({
+      ...user,
+      userType,
       form: true
     })
   }
 
-
-
-    const { form, name, surname, email, password, userType } = this.state;
-    console.log(this.state);
     
     return (
       <>
-      {!form && userType === null ? 
+      {!user.form && user.userType === null ? 
         <section>
           <button onClick={() => handleSelectUserType('traveller')}>Traveller</button>
           <button onClick={() => handleSelectUserType('volunteer')}>Volunteer</button>
@@ -58,13 +55,13 @@ const Signup = (props) => {
         :
         <form onSubmit={(e)=>handleFormSubmit(e)}>
           <label htmlFor='name'>Name:</label>
-          <input id='name' type='text' name='name' value={name} onChange={(e)=>handleChange(e)}/>
+          <input id='name' type='text' name='name' value={user.name} onChange={(e)=>handleChange(e)}/>
           <label htmlFor=''>Surname:</label>
-          <input id='surname' type='text' name='surname' value={surname} onChange={(e)=>handleChange(e)}/>
+          <input id='surname' type='text' name='surname' value={user.surname} onChange={(e)=>handleChange(e)}/>
           <label htmlFor=''>Email:</label>
-          <input id='email' type='email' name='email' value={email} onChange={(e)=>handleChange(e)}/>
+          <input id='email' type='email' name='email' value={user.email} onChange={(e)=>handleChange(e)}/>
           <label htmlFor='password'>Password:</label>
-          <input id='password' type='password' name='password' value={password} onChange={(e)=>handleChange(e)} />
+          <input id='password' type='password' name='password' value={user.password} onChange={(e)=>handleChange(e)} />
           <label htmlFor='needs'>What's your needs:</label>
           <input type='submit' value='Signup' /> 
         </form>
