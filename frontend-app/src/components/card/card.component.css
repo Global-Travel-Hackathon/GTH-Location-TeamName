@@ -3,3 +3,9 @@
     width: auto;
     overflow: hidden;
 }
+
+.text-card{
+    padding-top: -1px;
+    font-size: 14px;
+    line-height: 140%;
+}

@@ -22,7 +22,7 @@ export default class Register extends Component {
             data-aos-anchor="#example-anchor"
             data-aos-offset="500"
             data-aos-duration="500">
-                <img src={logo} className='form-background'/>
+                <img src={logo} className='form-background' data-aos="fade-down" alt='...'/>
                 <h1 className='mt-5'>Enterprise Registration</h1>
                 <Form className='mt-3 opacity'>
                     <Form.Group controlId="adminId">

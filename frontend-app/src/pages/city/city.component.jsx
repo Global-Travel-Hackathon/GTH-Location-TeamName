@@ -45,28 +45,28 @@ export default class City extends Component {
               imageUrl: 'https://coolinarika.azureedge.net/images/_variations/9/c/9c924e010ccaed50415e25c96877bb39_view_l.jpg?v=0'
           },
           {
-            title: 'Super Kuhinja',
+            title: 'Tea House',
             description: 'A quick description for restorants and stuff',
             id: 2,
-            imageUrl: 'https://cdn.pixabay.com/photo/2017/01/31/09/30/raspberry-2023404__340.jpg'
+            imageUrl: 'https://cdn.pixabay.com/photo/2014/12/04/15/21/tea-556777__340.jpg'
         },
         {
-            title: 'Cool Kuhinja',
+            title: 'Pastry Shop',
             description: 'A quick description for restorants and stuff',
             id: 3,
-            imageUrl: 'https://cdn.pixabay.com/photo/2015/12/09/17/11/vegetables-1085063__340.jpg'
+            imageUrl: 'https://cdn.pixabay.com/photo/2016/11/29/05/07/baked-goods-1867459_960_720.jpg'
         },
         {
-            title: 'Mega Kuhinja',
+            title: 'Handmade Souvenirs',
             description: 'A quick description for restorants and stuff',
             id: 4,
-            imageUrl: 'https://cdn.pixabay.com/photo/2017/12/10/14/47/piza-3010062__340.jpg'
+            imageUrl: 'https://cdn.pixabay.com/photo/2019/05/05/18/58/girl-4181395_960_720.jpg'
         },
         {
-            title: 'Forum Kuhinja',
+            title: 'Cookie Shop',
             description: 'A quick description for restorants and stuff',
             id: 5,
-            imageUrl: 'https://cdn.pixabay.com/photo/2014/10/19/20/59/hamburger-494706__340.jpg'
+            imageUrl: 'https://cdn.pixabay.com/photo/2017/12/01/16/14/cinnamon-stars-2991174_960_720.jpg'
         },
           
       ]

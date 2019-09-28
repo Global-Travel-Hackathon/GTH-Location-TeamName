@@ -13,7 +13,7 @@ const Card = ({imgUrl, title, description}) => (
             <img src={imgUrl} className="card-img-top imgheight" alt="..." />
             <div className="card-body">
               <h5 className="card-title">{title}</h5>
-              <p className="card-text">
+              <p className="card-text p-0 text-card">
                 {description}
               </p>
               <div className="width">

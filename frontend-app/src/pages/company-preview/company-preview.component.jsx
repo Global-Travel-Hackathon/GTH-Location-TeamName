@@ -13,7 +13,7 @@ export default class CompanyPreview extends Component {
         <div className="row">
           <div className="col-8">
             <h4 className="mt-3">Bakina Kuhinja</h4>
-            <a href='#'><p className='p-size site-size mb-1'>www.bakinakuhinja.com</p></a>
+            <a href='www.bakinakuhinja.com'><p className='p-size site-size mb-1'>www.bakinakuhinja.com</p></a>
             <img src={stars} className="starsize" alt="..." />
             <span>
               <img src={location} className="starsize ml-3" alt="..." />
