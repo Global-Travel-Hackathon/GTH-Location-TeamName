@@ -16,9 +16,9 @@ const Signup = (props) => {
 
   const handleFormSubmit = (event) => {
     event.preventDefault();
-    const {name, surname, email, password, userType} = user
+    
 
-    props.signup({ name, surname, email, password, userType })
+    props.signup({user})
       .then(() => {
         setUser({
             name: '',
@@ -33,13 +33,13 @@ const Signup = (props) => {
 
   const handleChange = (event) => {  
     const {name, value} = event.target;
-    setUser(...user,{[name]: value});
+    setUser({...user,[name]: value});
   }
 
   const handleSelectUserType = (userType) => {
     setUser({
       ...user,
-      userType: userType,
+      userType,
       form: true
     })
   }
