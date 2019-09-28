@@ -1,0 +1,10 @@
+.height{
+    height: 400px !important;
+}
+
+.star-left{
+    width: 50px;
+    margin-left: 17em;
+    margin-top: -1em;
+    position: absolute;
+}
