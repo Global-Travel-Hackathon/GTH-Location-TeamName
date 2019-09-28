@@ -1,5 +1,5 @@
-# GTH-Location-TeamName
-Project submission for the `Global Travel Hackathon in [Location], by [team-name] team`.
+# GTH-Barcelona-AlTrips
+Project submission for the `Global Travel Hackathon in Barcelona, by AlTrips team`.
 
 **Write one sentence explaining what does your project.**
 
