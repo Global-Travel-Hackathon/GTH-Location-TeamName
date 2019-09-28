@@ -53,7 +53,6 @@ const Signup = (props) => {
           <input id='email' type='email' name='email' value={user.email} onChange={(e)=>handleChange(e)}/>
           <label htmlFor='password'>Password:</label>
           <input id='password' type='password' name='password' value={user.password} onChange={(e)=>handleChange(e)} />
-          <label htmlFor='needs'>What's your needs:</label>
           <input type='submit' value='Signup' /> 
         </form>
       }
