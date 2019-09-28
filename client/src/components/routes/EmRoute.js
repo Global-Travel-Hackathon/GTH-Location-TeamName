@@ -2,13 +2,13 @@ import React from 'react'
 import { Route, Redirect } from 'react-router-dom';
 import withAuth from '../../hoc/withAuth';
 
-const AnonRoute = (props) => {
+const EmRoute = (props) => {
   const { isLoggedIn, render , ...rest} = props
   return (
     <>
-    {!isLoggedIn ?  <Route render={render} {...rest}/> : <Redirect to="/em"/>}  
+    {isLoggedIn && props.user.userType === 'volunteer' ?  <Route render={render} {...rest}/> : <Redirect to="/me"/>}  
     </>
   )
 }
 
-export default withAuth(AnonRoute)
+export default withAuth(EmRoute)
