@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap');
+
+.bottom{
+    margin-top: 100px;
+    margin-left: 520px !important;
+}
+
+.btn-primaryhome{
+    background-color: rgb(97, 187, 157) !important;
+    border: 10px solid rgb(97, 187, 157) !important;
+    color: white !important;
+}
+
+.btn-primaryhome:hover{
+    opacity: 0.8 !important;
+}
+
+.btncustom {
+    width: 100%;
+    text-align: center;
+    margin-top: 4em;
+}
+
+.btnsize{
+    width: 150px;
+    border-radius: 30px !important;
+
+}
+
+.pedit{
+    position: absolute;
+    width: 36vw;
+    margin-top: 22em;
+    background-color: rgb(241, 241, 241) !important;
+    border-radius: 10px;
+    padding: 4px;
+    color: #707070;
+}
+
+.overflow{
+    overflow-x: hidden;
+}
+
+.socialcircle{
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 7em;
+    position: absolute;
+    color: #707070;
+}
+
+h1{
+    margin-left: 20px;
+}

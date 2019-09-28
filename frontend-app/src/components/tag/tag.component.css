@@ -1,0 +1,15 @@
+.tagsize{
+        width: auto;
+        border-radius: 30px !important;
+}
+
+.btn-primarytag{
+    background-color: rgb(97, 187, 157) !important;
+    border: none !important;
+    color: white !important;
+    margin-right: 5px !important;
+}
+
+.btn-primarytag:hover{
+    opacity: 0.8 !important;
+}
