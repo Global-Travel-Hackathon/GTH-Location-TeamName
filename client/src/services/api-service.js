@@ -12,7 +12,19 @@ class ApiService {
     return this.trip.get('/em')
     .then(response => response)
   }
+  checkchat(users){
+    return this.auth.post('/checkchat', {users})
+    .then(data => data)
+  }
+  pushmessage(data){
+    return this.auth.post('/pushmessage', data)
+    .then(data => data)
 
+  }
+  getChat(data){
+    return this.auth.post('/getchat', data)
+    .then(data => data)
+  }
   getAllMyTrips() {
     return this.trip.get(`/me`)
     .then(response => response)

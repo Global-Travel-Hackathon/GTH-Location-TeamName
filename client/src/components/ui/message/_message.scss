@@ -1,0 +1,22 @@
+.other-message {
+  align-self: flex-start;
+  padding: 10px 20px 10px 50px;
+  margin: 0 0 5px;
+  background: $third-color;
+  border-radius: 5px;
+  position: relative;
+  span{
+    left:10px
+  }
+}
+.me-message {
+  align-self: flex-end;
+  padding: 10px 50px 10px 20px;
+  margin: 0 0 5px;
+  background: #AFAFAF;
+  border-radius: 5px;
+  position: relative;
+  span{
+    right:10px
+  }
+}
