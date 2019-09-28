@@ -6,7 +6,6 @@ import AnonRoute from './components/routes/AnonRoute.js';
 import EmRoute from './components/routes/EmRoute'
 import MeRoute from './components/routes/MeRoute'
 
-import Private from './pages/Private';
 import Landing from './pages/landing';
 import Signup from './pages/signup';
 import Login from './pages/login';
@@ -45,10 +44,7 @@ class App extends Component {
               exact
               path="/em"
               render={props => <><Menu/> <Me {...props} /> </>} />
-            <PrivateRoute
-              exact
-              path="/private"
-              render={(props)=> <Private {...props}/>} />
+            
             <PrivateRoute
               exact
               path="/chat/:id"

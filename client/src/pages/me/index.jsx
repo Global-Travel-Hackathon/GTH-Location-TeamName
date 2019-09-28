@@ -1,6 +1,7 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
+import withAuth from '../../hoc/withAuth';
 
-const Me = () => {
+const Me = (props) => {
   return (
     <div>
       
@@ -8,4 +9,4 @@ const Me = () => {
   )
 }
 
-export default Me
+export default withAuth(Me)
