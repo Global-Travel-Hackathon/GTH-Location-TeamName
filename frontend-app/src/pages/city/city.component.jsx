@@ -1,8 +1,7 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import Card from '../../components/card/card.component';
 import Tag from "../../components/tag/tag.component";
-import sarma from "../../assets/sarma.jpg";
-import stars from "../../assets/stars.png";
+
 import "./city.component.css";
 
 export default class City extends Component {
@@ -36,6 +35,39 @@ export default class City extends Component {
           id: 5,
           checked: false
         }
+      ],
+      companies:[
+          {
+              title: 'Bakina Kuhinja',
+              description: 'A quick description for restorants and stuff',
+              id: 1,
+              imageUrl: 'https://coolinarika.azureedge.net/images/_variations/9/c/9c924e010ccaed50415e25c96877bb39_view_l.jpg?v=0'
+          },
+          {
+            title: 'Super Kuhinja',
+            description: 'A quick description for restorants and stuff',
+            id: 2,
+            imageUrl: 'https://cdn.pixabay.com/photo/2017/01/31/09/30/raspberry-2023404__340.jpg'
+        },
+        {
+            title: 'Cool Kuhinja',
+            description: 'A quick description for restorants and stuff',
+            id: 3,
+            imageUrl: 'https://cdn.pixabay.com/photo/2015/12/09/17/11/vegetables-1085063__340.jpg'
+        },
+        {
+            title: 'Mega Kuhinja',
+            description: 'A quick description for restorants and stuff',
+            id: 4,
+            imageUrl: 'https://cdn.pixabay.com/photo/2017/12/10/14/47/piza-3010062__340.jpg'
+        },
+        {
+            title: 'Forum Kuhinja',
+            description: 'A quick description for restorants and stuff',
+            id: 5,
+            imageUrl: 'https://cdn.pixabay.com/photo/2014/10/19/20/59/hamburger-494706__340.jpg'
+        },
+          
       ]
     };
   }
@@ -57,26 +89,15 @@ export default class City extends Component {
                 </div>
               ))}
             </div>
-            <div className="cardcontainer">
-              <div className="card mt-4" style={{ width: 16 + "rem" }}>
-                <Link
-                  to="/company-preview"
-                  style={{ textDecoration: "none", color: "black" }}
-                >
-                  <img src={sarma} className="card-img-top" alt="..." />
-                  <div className="card-body">
-                    <h5 className="card-title">Bakina Kuhinja</h5>
-                    <p className="card-text">
-                      Some quick example text to build on the card title and
-                      make up the bulk of the card's content.
-                    </p>
-                    <div className="width">
-                      <img src={stars} className="left" alt="..." />
-                    </div>
-                  </div>
-                </Link>
-              </div>
-            </div>
+                <div className='row'>
+                    {this.state.companies.map(({id, title, imageUrl, description}) => (
+                        <div className='ml-2 mr-2' data-aos="zoom-in-down"  data-aos-duration="1000">
+                        <Card key={id} title={title} imgUrl={imageUrl} description={description}/>
+                        </div>
+                    ))}
+
+                </div>
+            
           </div>
         </div>
       </div>

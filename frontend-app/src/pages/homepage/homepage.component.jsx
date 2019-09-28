@@ -12,7 +12,7 @@ export default class Homepage extends Component {
                     <div className='btncustom'>
                         <Link className="btn btn-primaryhome btnsize" to='/belgrade' role="button">Where to?</Link>
                     </div>
-                    <h1 className='socialcircle'>THE SOCIAL <br/>CIRCLE</h1>
+                    <h1 className='socialcircle' data-aos="fade-right" data-aos-duration="3000">THE SOCIAL <br/>CIRCLE</h1>
                         <p className='pedit'>
                         "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis 
                         praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias 
@@ -22,7 +22,7 @@ export default class Homepage extends Component {
                         eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus"
                         </p>
 
-                    <img className='offset-md-6 bottom' src={imageUrl} alt='logo'/>
+                    <img className='offset-md-6 bottom overflow-y' data-aos="fade-down" data-aos-duration="2000" src={imageUrl} alt='logo'/>
                 </div>
             </div>
         )

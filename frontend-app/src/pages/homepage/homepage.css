@@ -3,6 +3,7 @@
 .bottom{
     margin-top: 100px;
     margin-left: 520px !important;
+    overflow: hidden;
 }
 
 .btn-primaryhome{
@@ -39,6 +40,10 @@
 
 .overflow{
     overflow-x: hidden;
+}
+
+.overflow-y{
+    overflow-y: hidden !important;
 }
 
 .socialcircle{

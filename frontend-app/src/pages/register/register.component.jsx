@@ -17,9 +17,13 @@ export default class Register extends Component {
 
     render() {
         return (
-            <div className="container">
-                <h1>Registrovanje firme</h1>
-                <Form>
+            <div className="container" data-aos="fade-up"
+            data-aos-anchor="#example-anchor"
+            data-aos-offset="500"
+            data-aos-duration="500">
+
+                <h1 className='mt-5'>Registrovanje firme</h1>
+                <Form className='mt-3'>
                     <Form.Group controlId="adminId">
                         <Form.Label>Full name (admin)</Form.Label>
                         <Form.Control type="text" placeholder="John Doe" />
