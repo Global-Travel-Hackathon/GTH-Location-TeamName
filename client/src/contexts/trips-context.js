@@ -10,7 +10,7 @@ const TripsProvider = (props) => {
   })
 
   const tripsAdd = (trip) => {
-    return ApiService.add(trip)
+    return ApiService.addOneTrip(trip)
     .then(trips => {
       setTripsState({
         ...tripsSate,
