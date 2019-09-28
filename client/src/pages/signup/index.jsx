@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import withAuth from '../../hoc/withAuth.js';
 
 const Signup = (props) => {
-
+console.log(props)
   const [user,setUser] = useState({
     name: '',
     surname: '',

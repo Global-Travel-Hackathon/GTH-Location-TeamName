@@ -8,8 +8,8 @@ const AuthProvider = (props) => {
     isLoggedIn: false,
     user: {}
   })
-  const userInvite = (user) => {
-    return authService.invite(user)
+  const userSignup = (user) => {
+    return authService.signup(user)
   }
 
   const userCheckToken = (token) => {
@@ -76,7 +76,7 @@ const AuthProvider = (props) => {
                 isLoggedIn,
                 login: userLogin,
                 complete: userComplete,
-                invite: userInvite,
+                signup: userSignup,
                 logout: userLogout,
                 checktoken: userCheckToken
               }
