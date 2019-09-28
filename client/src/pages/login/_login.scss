@@ -1,0 +1,78 @@
+@mixin flexCenter ($align){
+  display: flex;
+  align-items: $align;
+  flex-direction: column;
+}
+
+@mixin buttonTitle ($font-size, $color, $padding){
+  font-size: $font-size;
+  color: $color;
+  padding: $padding;
+}
+
+.login {
+  @include flexCenter(center);
+  font-family: 'Blogger Sans';
+  font-weight: 400;
+  background: $second-color;
+  height: 100vh;
+  .login-content {
+    @include flexCenter(center);
+    background: white;
+    height: 82vh;
+    padding: 24px 0;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border-radius: 18px;
+  }
+}
+
+.logo {
+  width: 100px;
+  margin: 24px 0;
+}
+
+.title {
+  width: 53px;
+  height: 25px;
+  text-align: left;
+  font-size: 20px;
+  letter-spacing: 0;
+  color: #A2BD38;
+  opacity: 1;
+}
+
+.login-form {
+  @include flexCenter(initial);
+  width: 100vw;
+  padding: 35px;
+  .input {
+    width: 349px;
+    height: 50px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #CFCFCF;
+    border-radius: 9px;
+    opacity: 1;
+    margin-bottom: 20px;
+  }
+  .label {
+    width: 33px;
+    height: 19px;
+    text-align: left;
+    font-size: 16px;
+    letter-spacing: 0;
+    color: #000000;
+    opacity: 1;
+  }
+  .button-submit {
+    width: 349px;
+    height: 70px;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+    background: #DBAE62 0% 0% no-repeat padding-box;
+    border-radius: 9px;
+    opacity: 1;
+    margin-top: 160px;
+    .button-title {
+      @include buttonTitle(26px, #FFFFFF, 0);
+    }
+  }
+}
