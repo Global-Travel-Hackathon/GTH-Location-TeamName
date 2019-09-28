@@ -6,7 +6,7 @@ const AnonRoute = (props) => {
   const { isLoggedIn, render , ...rest} = props
   return (
     <>
-    {!isLoggedIn ?  <Route render={render} {...rest}/> : <Redirect to="/grid"/>}  
+    {!isLoggedIn ?  <Route render={render} {...rest}/> : <Redirect to="/private"/>}  
     </>
   )
 }

@@ -10,6 +10,13 @@ const AuthProvider = (props) => {
   })
   const userSignup = (user) => {
     return authService.signup(user)
+    .then(user => {
+      setClient({
+        ...client,
+        isLoggedIn: true,
+        user: user.data
+      })
+    })
   }
 
   const userCheckToken = (token) => {
@@ -51,6 +58,7 @@ const AuthProvider = (props) => {
   useEffect(()=>{
     authService.me()
     .then(user => {
+      console.log(user)
       setClient({
         user,
         isLoggedIn: true,
