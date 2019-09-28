@@ -58,7 +58,6 @@ const AuthProvider = (props) => {
   useEffect(()=>{
     authService.me()
     .then(user => {
-      console.log(user)
       setClient({
         user,
         isLoggedIn: true,

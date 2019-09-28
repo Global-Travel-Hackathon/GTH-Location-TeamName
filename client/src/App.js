@@ -3,12 +3,16 @@ import {BrowserRouter as Router, Switch} from 'react-router-dom';
 
 import PrivateRoute from './components/routes/PrivateRoute.js';
 import AnonRoute from './components/routes/AnonRoute.js';
+import EmRoute from './components/routes/EmRoute'
+import MeRoute from './components/routes/MeRoute'
 
 import Private from './pages/Private';
 import Landing from './pages/landing';
 import Signup from './pages/signup';
 import Login from './pages/login';
 import Chat from './pages/chat';
+import Em from './pages/em'
+import Me from './pages/me'
 
 import Menu from './components/ui/menu'
 import AuthProvider from './contexts/auth-context.js';
@@ -33,6 +37,14 @@ class App extends Component {
               exact
               path="/login"
               render={(props)=> <Login {...props}/>} />
+            <EmRoute
+              exact
+              path="/em"
+              render={props => <><Menu/> <Em {...props} /> </>} />
+            <MeRoute
+              exact
+              path="/em"
+              render={props => <><Menu/> <Me {...props} /> </>} />
             <PrivateRoute
               exact
               path="/private"
