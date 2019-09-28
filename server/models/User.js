@@ -20,10 +20,9 @@ const userSchema = new Schema({
     type: String,
     required: true
   },
-  type: {
+  userType: {
     type: String,
-    required: true,
-    enum: ['Volunteer', 'Traveler']
+    enum: ['volunteer', 'traveller']
   },
   pocket: {
     type: Number,

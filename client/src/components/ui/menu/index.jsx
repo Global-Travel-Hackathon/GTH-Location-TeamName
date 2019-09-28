@@ -256,7 +256,6 @@ const Menu = (props) => {
   }
 
   useEffect(() => {
-    console.log(kiwi.children)
     let t = new TimelineMax({
       onComplete() {
         isAnimated.current = false;
@@ -311,7 +310,7 @@ const Menu = (props) => {
     <nav className="header-menu">
       <div className="toggler-logo">
         <span style={{width:'33px'}}></span>
-        <Link to="/grid">
+        <Link to="/">
           <KiwiEm ref={e => kiwi = e} className="logo-header"/>
         </Link>
       <button className="nav-btn" onClick={e => toggleMenu(e)} onMouseEnter={onOver} onMouseLeave={onOut}>

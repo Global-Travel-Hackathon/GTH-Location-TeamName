@@ -10,7 +10,7 @@ class AuthProvider extends Component {
     isLoading: true,
   }
 
-  userSignUp = (user) => {
+  userSignUp = (user) => {        
     return authService.signup(user)
     .then((user) => {
       this.setState({
