@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Card from '../../components/card/card.component';
 import Tag from "../../components/tag/tag.component";
+import {Link} from 'react-router-dom';
 
 import "./city.component.css";
 
@@ -11,7 +12,7 @@ export default class City extends Component {
     this.state = {
       tags: [
         {
-          title: "restourant",
+          title: "restaurant",
           id: 1,
           checked: true
         },
@@ -77,11 +78,17 @@ export default class City extends Component {
       <div>
         <div className="overflow">
           <div className="container">
-            <div className="btncustom">
-              <div className="btn btn-primaryhome btnsize" to="/belgrade">
-                BELGRADE
-              </div>
-            </div>
+          <div className='btncustom'>
+                        <div class="dropdown">
+                        <button class="btn btn-primaryhome btnsize dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Belgrade
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <Link class="dropdown-item" to='/belgrade' role="button">Novi Sad</Link>
+                            <Link class="dropdown-item" to='/belgrade' role="button">Another city</Link>
+                            <Link class="dropdown-item" to='/belgrade' role="button">Another city#2</Link>
+                        </div>
+                        </div></div>
             <div className="row align-items-start mt-3">
               {this.state.tags.map(({ id, title }) => (
                 <div className="col-0">

@@ -10,8 +10,20 @@ export default class Homepage extends Component {
             <div className='overflow'>
                 <div className='container'>
                     <div className='btncustom'>
-                        <Link className="btn btn-primaryhome btnsize" to='/belgrade' role="button">Where to?</Link>
+                        <div className="dropdown">
+                        <button className="btn btn-primaryhome btnsize dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Where to?
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <Link className="dropdown-item" to='/belgrade' role="button">Belgrade</Link>
+                            <Link className="dropdown-item" to='/belgrade' role="button">Another city</Link>
+                            <Link className="dropdown-item" to='/belgrade' role="button">Another city#2</Link>
+                        </div>
+                        </div>
+
+
                     </div>
+                    
                     <h1 className='socialcircle' data-aos="fade-right" data-aos-duration="3000">THE SOCIAL <br/>CIRCLE</h1>
                         <p className='pedit'>
                         "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis 

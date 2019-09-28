@@ -10,6 +10,7 @@
     background-color: rgb(97, 187, 157) !important;
     border: 10px solid rgb(97, 187, 157) !important;
     color: white !important;
+
 }
 
 .btn-primaryhome:hover{
@@ -20,23 +21,25 @@
     width: 100%;
     text-align: center;
     margin-top: 4em;
+    
 }
 
 .btnsize{
     width: 150px;
     border-radius: 30px !important;
-
 }
 
 .pedit{
     position: absolute;
-    width: 36vw;
+    width: 35vw;
     margin-top: 22em;
-    background-color: rgb(241, 241, 241) !important;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.774), rgb(255, 255, 255));
     border-radius: 10px;
-    padding: 4px;
+    padding: 4px; 
     color: #707070;
+    opacity: 1;
 }
+
 
 .overflow{
     overflow-x: hidden;
@@ -48,11 +51,27 @@
 
 .socialcircle{
     font-family: 'Open Sans Condensed', sans-serif;
-    font-size: 7em;
+    font-size: 6.5em;
     position: absolute;
     color: #707070;
+    margin-top: 40px;
 }
 
 h1{
     margin-left: 20px;
+}
+
+.dropdown-menu{
+    border-radius: 20px !important;
+    border: 1px solid rgb(22, 230, 22) !important;
+    
+}
+
+.logo-size{
+    width: 400px;
+    height: auto;
+    position: absolute;
+    margin-top: 3em;
+    margin-left: 3em;
+    opacity: 0.8;
 }

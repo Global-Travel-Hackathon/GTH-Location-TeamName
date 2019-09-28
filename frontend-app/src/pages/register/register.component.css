@@ -1,0 +1,14 @@
+.form-background{
+    opacity: 0.2;
+    position: absolute;
+    margin-left: 44em;
+    margin-top: 23em;
+    z-index: -1 !important;
+    height: 400px;
+    
+}
+
+.opacity{
+    opacity: 0.7 !important;
+    z-index: 99 !important;
+}

@@ -1,0 +1,10 @@
+.circle{
+    border: 5px solid rgb(255, 240, 25);
+    border-radius: 50%;
+    width: 50px !important;
+    height: auto;
+}
+
+.navbar-brand{
+    margin-left: 10px;
+}

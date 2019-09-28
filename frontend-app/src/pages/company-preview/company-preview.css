@@ -5,6 +5,29 @@
 .star-left{
     width: 50px;
     margin-left: 17em;
-    margin-top: -1em;
+    margin-top: -1.5em;
     position: absolute;
+}
+
+.starsize{
+    height: 1em !important;
+}
+
+.p-size{
+    font-size: 12px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(4, 117, 19);
+}
+
+.site-size{
+    font-size: 15px !important;
+}
+.auth-margin{
+    margin-top: -10px;
+    margin-right: auto;
+    margin-left: 270px;
+    text-align: end;
+    font-size: 12px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(4, 117, 19);
 }

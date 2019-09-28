@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Form from 'react-bootstrap/Form';
 import './register.component.css';
+import logo from '../../assets/logo.png';
 
 
 export default class Register extends Component {
@@ -21,9 +22,9 @@ export default class Register extends Component {
             data-aos-anchor="#example-anchor"
             data-aos-offset="500"
             data-aos-duration="500">
-
-                <h1 className='mt-5'>Registrovanje firme</h1>
-                <Form className='mt-3'>
+                <img src={logo} className='form-background'/>
+                <h1 className='mt-5'>Enterprise Registration</h1>
+                <Form className='mt-3 opacity'>
                     <Form.Group controlId="adminId">
                         <Form.Label>Full name (admin)</Form.Label>
                         <Form.Control type="text" placeholder="John Doe" />
@@ -60,6 +61,7 @@ export default class Register extends Component {
                         Submit
                     </button>
                     </Form>
+                    
             </div>
         )
     }
