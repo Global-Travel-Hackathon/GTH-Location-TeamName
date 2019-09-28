@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import withAuth from '../../hoc/withAuth.js';
 
 const Signup = (props) => {
-console.log(props)
   const [user,setUser] = useState({
     name: '',
     surname: '',
@@ -18,16 +17,8 @@ console.log(props)
     event.preventDefault();
     
 
-    props.signup({user})
-      .then(() => {
-        setUser({
-            name: '',
-            surname: '',
-            email: '',
-            password: '',
-            userType: '',
-        });
-      })
+    props.signup(user)
+      .then()
       .catch( error => console.log(error) )
   }
 
